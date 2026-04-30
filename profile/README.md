@@ -44,7 +44,7 @@ MindMate is split across three focused repositories:
 
 REST API and real-time server — the core of the platform. Handles authentication, user management, memories, reminders, alerts, location tracking, and IoT device communication.
 
-### 🔷 [alzaheimer-web](https://github.com/MindMate-Project/alzaheimer-web)
+### 🔷 [Web](https://github.com/MindMate-Project/Web)
 **React · Redux Toolkit · JavaScript**
 
 Web application for patients, caregivers, and family members. Provides dashboards for memory browsing, reminder management, live location viewing, and alert monitoring.
@@ -73,25 +73,7 @@ Standalone face recognition microservice. Identifies Alzheimer's patients via fa
 
 </div>
 
----
 
-## 🚀 Getting Started
-
-Each repository has its own setup guide:
-
-- **Backend** → [Setup instructions](https://github.com/MindMate-Project/Backend#-prerequisites--setup-locally)
-- **alzaheimer-web** → `npm install && npm start`
-- **AI** → `pip install -r requirements.txt && uvicorn main:app`
-
-Full API reference is available at **[alzaheimer-backend.onrender.com/api-docs](https://alzaheimer-backend.onrender.com/api-docs/)**.
-
----
-
-## 🤝 Contributing
-
-Contributions are welcome across all repositories. Please open an issue first to discuss significant changes, then submit a pull request targeting the `main` branch.
-
----
 
 <div align="center">
 
