@@ -1,8 +1,0 @@
-blank_issues_enabled: false
-contact_links:
-  - name: Security Vulnerability
-    url: https://github.com/MindMate-Project/.github/blob/main/SECURITY.md
-    about: Please follow our security policy to report vulnerabilities responsibly.
-  - name: General Question / Discussion
-    url: https://github.com/orgs/MindMate-Project/discussions
-    about: Use Discussions for questions that are not bugs or feature requests.
