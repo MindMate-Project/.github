@@ -1,19 +1,54 @@
-# MindMate — Organization Documentation
+# 🧠 MindMate Project
 
-This repository contains the default community health files and documentation for the **MindMate Project** GitHub organization. Files placed here apply to all repositories in the organization unless a repository provides its own.
+> **AI-Powered Alzheimer's Care Platform** — empowering patients, caregivers, and families through intelligent technology.
 
-## Contents
+---
 
-| File / Directory | Purpose |
-|---|---|
-| [`profile/README.md`](profile/README.md) | Organization profile shown on the MindMate GitHub page |
-| [`CONTRIBUTING.md`](CONTRIBUTING.md) | How to contribute to MindMate repositories |
-| [`CODE_OF_CONDUCT.md`](CODE_OF_CONDUCT.md) | Community standards and expectations |
-| [`SECURITY.md`](SECURITY.md) | How to report security vulnerabilities |
-| [`SUPPORT.md`](SUPPORT.md) | Where to get help and support |
-| [`ISSUE_TEMPLATE/`](ISSUE_TEMPLATE/) | Default issue templates (bug report, feature request) |
-| [`PULL_REQUEST_TEMPLATE.md`](PULL_REQUEST_TEMPLATE.md) | Default pull request template |
+## 🌟 About MindMate
 
-## About MindMate
+MindMate is an open-source platform built to improve the quality of life for Alzheimer's patients and the people who care for them. By combining AI, real-time communication, and IoT, MindMate delivers a unified care ecosystem that spans memory preservation, health reminders, safety monitoring, and face recognition.
 
-MindMate is an AI-powered Alzheimer's care platform connecting patients, caregivers, and families through intelligent technology. See the [organization profile](profile/README.md) for details.
+---
+
+## 🏗️ Our Repositories
+
+| Repository | Description | Stack |
+|---|---|---|
+| [**Backend**](https://github.com/MindMate-Project/Backend) | REST API — location tracking, reminders, alerts, IoT integration | TypeScript · Node.js · MongoDB |
+| [**alzaheimer-web**](https://github.com/MindMate-Project/alzaheimer-web) | Web application for patients, caregivers & family | React · Redux Toolkit |
+| [**AI**](https://github.com/MindMate-Project/AI) | AI service — face recognition & intelligence layer | Python · FastAPI |
+
+---
+
+## ✨ Key Features
+
+- 🔐 **Role-based access** — patients, caregivers, family members, and admins
+- 💾 **Memory preservation** — photos, videos, and personal stories with smart tagging
+- ⏰ **Smart reminders** — medication and appointment reminders with push, email & SMS alerts
+- 🚨 **Real-time alerts** — instant notifications and acknowledgment tracking
+- 📍 **Location tracking** — real-time GPS monitoring via Socket.io & MQTT
+- 🤖 **Face recognition** — AI-powered patient identification
+- 🔧 **IoT support** — integration with wearable and connected devices
+- 📊 **Swagger API docs** — interactive API documentation at `/api-docs`
+
+---
+
+## 🚀 Getting Started
+
+Each repository has its own setup guide:
+
+- **Backend** → [Setup instructions](https://github.com/MindMate-Project/Backend#-prerequisites--setup-locally)
+- **Web App** → [Setup instructions](https://github.com/MindMate-Project/alzaheimer-web#available-scripts)
+- **AI Service** → [Dockerfile & requirements](https://github.com/MindMate-Project/AI)
+
+---
+
+## 📄 License
+
+All MindMate repositories are released under the **ISC License** unless noted otherwise.
+
+---
+
+<p align="center">
+  Built with ❤️ to support Alzheimer's patients and their caregivers.
+</p>
