@@ -8,6 +8,7 @@
 
 [![Backend](https://img.shields.io/badge/Backend-TypeScript-3178C6?style=flat-square&logo=typescript)](https://github.com/MindMate-Project/Backend)
 [![Frontend](https://img.shields.io/badge/Frontend-React-61DAFB?style=flat-square&logo=react)](https://github.com/MindMate-Project/alzaheimer-web)
+[![Mobile App](https://img.shields.io/badge/Mobile-Flutter-02569B?style=flat-square&logo=flutter)](https://github.com/MindMate-Project/MindMate-app)
 [![AI](https://img.shields.io/badge/AI-Python-3776AB?style=flat-square&logo=python)](https://github.com/MindMate-Project/AI)
 [![API Docs](https://img.shields.io/badge/API%20Docs-Swagger-85EA2D?style=flat-square&logo=swagger)](https://alzaheimer-backend.onrender.com/api-docs/)
 
@@ -49,6 +50,11 @@ REST API and real-time server — the core of the platform. Handles authenticati
 
 Web application for patients, caregivers, and family members. Provides dashboards for memory browsing, reminder management, live location viewing, and alert monitoring.
 
+### 🔷 [Mobile App](https://github.com/MindMate-Project/MindMate-app)
+**Dart · Flutter · Bloc/Cubit**
+
+Cross-platform mobile application for patients and caregivers. Provides on-the-go access to smart reminders, real-time location tracking, and alerts.
+
 ### 🔷 [AI](https://github.com/MindMate-Project/AI)
 **Python · FastAPI · InsightFace · ONNX**
 
@@ -65,6 +71,7 @@ Standalone face recognition microservice. Identifies Alzheimer's patients via fa
 | **Backend** | Node.js, TypeScript, Express.js v5, MongoDB, Mongoose |
 | **Real-Time** | Socket.io, MQTT |
 | **Frontend** | React, Redux Toolkit, CSS3, HTML5 |
+| **Mobile** | Flutter, Dart, Bloc/Cubit |
 | **AI / ML** | Python, FastAPI, InsightFace, ONNX Runtime, OpenCV |
 | **Auth & Security** | JWT, bcryptjs, role-based access control |
 | **Notifications** | Firebase FCM, Nodemailer, Brevo (email & SMS) |
