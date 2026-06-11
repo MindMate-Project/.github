@@ -54,6 +54,32 @@ MindMate is a full-stack platform designed to support Alzheimer's patients and t
 
 ## 🏗️ Architecture
 
+How the pieces talk to each other:
+
+```mermaid
+flowchart LR
+    APP["📱 Mobile App<br/>(Flutter)"]
+    WEB["💻 Web App<br/>(React)"]
+    API["🔷 Backend<br/>(Express REST API)"]
+    SOCK["🔄 Socket.io"]
+    AI["🤖 AI Service<br/>(FastAPI · InsightFace)"]
+    DB[("🗄️ MongoDB")]
+    CLD[("🖼️ Cloudinary<br/>media")]
+    MAIL["✉️ Brevo<br/>email"]
+    GPS["📡 GPS Tracker<br/>(IoT device)"]
+
+    APP -- "REST + JWT" --> API
+    WEB -- "REST + JWT" --> API
+    API -- "face matching" --> AI
+    API --> DB
+    API --> CLD
+    API -- "verification & reset emails" --> MAIL
+    GPS -- "MQTT" --> API
+    API -- "live location" --> SOCK --> WEB
+```
+
+The mobile app schedules reminder notifications **on the device itself** from the backend's reminder data — so alarms still fire even with a poor connection.
+
 MindMate is split across four focused repositories:
 
 ### 🔷 [Backend](https://github.com/MindMate-Project/Backend)
@@ -70,6 +96,11 @@ Web application for patients, caregivers, and family members. Provides dashboard
 **Dart · Flutter · Bloc/Cubit**
 
 Cross-platform mobile application for patients and caregivers. Patients get medication and appointment reminders with a full-screen alarm, a Memory Bank of photos and stories, and a camera flow that recognizes the people around them. Caregivers manage their patients, create reminders and memories, register known people for face recognition, train memory with brain exercises, and check the patient's location.
+
+- **One codebase, two platforms** — runs on Android & iOS from a single Flutter project
+- **Two tailored experiences** — Patient and Caregiver, chosen at signup
+- **Feature-first clean architecture** with Bloc/Cubit state management
+- **Offline-friendly reminders** — notifications and alarms are scheduled on-device, so they fire even without a connection
 
 ### 🔷 [AI](https://github.com/MindMate-Project/AI)
 **Python · FastAPI · InsightFace · ONNX**
