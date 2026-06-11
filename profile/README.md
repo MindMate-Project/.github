@@ -7,9 +7,11 @@
 *Connecting patients, caregivers, and families through intelligent technology*
 
 [![Backend](https://img.shields.io/badge/Backend-TypeScript-3178C6?style=flat-square&logo=typescript)](https://github.com/MindMate-Project/Backend)
-[![Frontend](https://img.shields.io/badge/Frontend-React-61DAFB?style=flat-square&logo=react)](https://github.com/MindMate-Project/alzaheimer-web)
+[![Frontend](https://img.shields.io/badge/Frontend-React-61DAFB?style=flat-square&logo=react)](https://github.com/MindMate-Project/Web)
 [![Mobile App](https://img.shields.io/badge/Mobile-Flutter-02569B?style=flat-square&logo=flutter)](https://github.com/MindMate-Project/MindMate-app)
 [![AI](https://img.shields.io/badge/AI-Python-3776AB?style=flat-square&logo=python)](https://github.com/MindMate-Project/AI)
+
+[![Live Web App](https://img.shields.io/badge/Live-Web%20App-000000?style=flat-square&logo=vercel)](https://web-mindmate.vercel.app)
 [![API Docs](https://img.shields.io/badge/API%20Docs-Swagger-85EA2D?style=flat-square&logo=swagger)](https://alzaheimer-backend.onrender.com/api-docs/)
 
 </div>
@@ -26,19 +28,33 @@ MindMate is a full-stack platform designed to support Alzheimer's patients and t
 
 | Feature | Description |
 |---|---|
-| 🧩 **Face Recognition** | AI-powered patient identification using InsightFace |
-| 📍 **Real-Time Location** | Live GPS tracking via Socket.io & MQTT IoT devices |
-| 💾 **Memory Preservation** | Store photos, videos, and stories with metadata and tags |
-| ⏰ **Smart Reminders** | Automated medication and appointment reminders with push/email/SMS |
+| 🧩 **Face Recognition** | Helps patients recognize loved ones — point the camera at a person and the app says who they are and how they're related (InsightFace) |
+| 📍 **Real-Time Location** | Live GPS tracking via Socket.io & MQTT IoT devices, with a location view for caregivers |
+| 💾 **Memory Bank** | Store photos, videos, and stories with captions, relations, and tags |
+| ⏰ **Smart Reminders** | Medication & appointment reminders with on-device notifications and a full-screen alarm in the mobile app |
 | 🚨 **Alert System** | Instant safety alerts with acknowledgment tracking |
 | 🔐 **Role-Based Access** | Secure multi-role system for patients, caregivers, and admins |
-| 📱 **Push Notifications** | Firebase FCM for real-time multi-device notifications |
+| ✉️ **Email Notifications** | Account verification and password reset emails via Brevo |
+
+---
+
+## 📱 App Preview
+
+<div align="center">
+
+| Patient Home | Face Recognition | Caregiver Dashboard |
+|:---:|:---:|:---:|
+| <img src="https://raw.githubusercontent.com/MindMate-Project/MindMate-app/dev-test/screenshots/07_patient_home.png" width="220" alt="Patient home screen"/> | <img src="https://raw.githubusercontent.com/MindMate-Project/MindMate-app/dev-test/screenshots/11d_face_outcome.png" width="220" alt="Face recognition result"/> | <img src="https://raw.githubusercontent.com/MindMate-Project/MindMate-app/dev-test/screenshots/15_caregiver_home.png" width="220" alt="Caregiver dashboard"/> |
+
+*Full tour with 23 screenshots in the [mobile app README](https://github.com/MindMate-Project/MindMate-app#readme).*
+
+</div>
 
 ---
 
 ## 🏗️ Architecture
 
-MindMate is split across three focused repositories:
+MindMate is split across four focused repositories:
 
 ### 🔷 [Backend](https://github.com/MindMate-Project/Backend)
 **TypeScript · Express.js · MongoDB · Socket.io**
@@ -48,17 +64,17 @@ REST API and real-time server — the core of the platform. Handles authenticati
 ### 🔷 [Web](https://github.com/MindMate-Project/Web)
 **React · Redux Toolkit · JavaScript**
 
-Web application for patients, caregivers, and family members. Provides dashboards for memory browsing, reminder management, live location viewing, and alert monitoring.
+Web application for patients, caregivers, and family members. Provides dashboards for memory browsing, reminder management, live location viewing, and alert monitoring. **[Live demo →](https://web-mindmate.vercel.app)**
 
 ### 🔷 [Mobile App](https://github.com/MindMate-Project/MindMate-app)
 **Dart · Flutter · Bloc/Cubit**
 
-Cross-platform mobile application for patients and caregivers. Provides on-the-go access to smart reminders, real-time location tracking, and alerts.
+Cross-platform mobile application for patients and caregivers. Patients get medication and appointment reminders with a full-screen alarm, a Memory Bank of photos and stories, and a camera flow that recognizes the people around them. Caregivers manage their patients, create reminders and memories, register known people for face recognition, train memory with brain exercises, and check the patient's location.
 
 ### 🔷 [AI](https://github.com/MindMate-Project/AI)
 **Python · FastAPI · InsightFace · ONNX**
 
-Standalone face recognition microservice. Identifies Alzheimer's patients via facial analysis and exposes results through a REST API consumed by the backend.
+Standalone face recognition microservice. Stores face embeddings of the people registered for each patient (family and friends) and identifies who appears in a photo, exposing results through a REST API consumed by the backend.
 
 ---
 
@@ -74,9 +90,9 @@ Standalone face recognition microservice. Identifies Alzheimer's patients via fa
 | **Mobile** | Flutter, Dart, Bloc/Cubit |
 | **AI / ML** | Python, FastAPI, InsightFace, ONNX Runtime, OpenCV |
 | **Auth & Security** | JWT, bcryptjs, role-based access control |
-| **Notifications** | Firebase FCM, Nodemailer, Brevo (email & SMS) |
+| **Notifications** | Flutter local notifications (reminders & alarms), Nodemailer + Brevo (email) |
 | **Storage** | Cloudinary (media files), MongoDB (data) |
-| **DevOps** | Docker, Render |
+| **DevOps** | Docker · Render (Backend) · Vercel (Web) · AWS EC2 + GitHub Actions (AI) |
 
 </div>
 
